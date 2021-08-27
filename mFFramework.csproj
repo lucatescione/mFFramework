@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9C486BC-F015-4153-8B76-E31EF1D4C277}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mFFramework</RootNamespace>
+    <AssemblyName>mFFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\mFFramework.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacheManager\Cacher.cs" />
+    <Compile Include="CacheManager\CacheContainer.cs" />
+    <Compile Include="CacheManager\ICacher.cs" />
+    <Compile Include="Conversions\Conversions.cs" />
+    <Compile Include="Drivers\Connections.cs" />
+    <Compile Include="Drivers\DriversRisorse.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DriversRisorse.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Drivers\SqlServerDriver.cs" />
+    <Compile Include="Extensions\Enumerations\EnumerationExtensions.cs" />
+    <Compile Include="Extensions\WebControls\CheckBoxList\CheckBoxListExtensions.cs" />
+    <Compile Include="Extensions\WebControls\DropDownList\DropDownListExtensions.cs" />
+    <Compile Include="Extensions\WebControls\GridView\GridViewExtensions.cs" />
+    <Compile Include="Extensions\WebControls\ListBox\ListBoxExtensions.cs" />
+    <Compile Include="Extensions\WebControls\RadioButtonList\RadioButtonListExtensions.cs" />
+    <Compile Include="Extensions\WindowsControls\CheckedListBox\CheckedListBoxExtensions.cs" />
+    <Compile Include="Extensions\WindowsControls\ComboBox\ComboBoxExtensions.cs" />
+    <Compile Include="Extensions\WindowsControls\ListBox\ListBoxExtensions.cs" />
+    <Compile Include="LogManager\Logger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\EntitiesRepository.cs" />
+    <Compile Include="Repository\IEntitiesRepository.cs" />
+    <Compile Include="Repository\RepositoryFactorycs.cs" />
+    <Compile Include="Types\Connection.cs" />
+    <Compile Include="Types\Day.cs" />
+    <Compile Include="Types\Enumerations.cs" />
+    <Compile Include="Types\ItemEnumeration.cs" />
+    <Compile Include="Types\mFVersion.cs" />
+    <Compile Include="Types\Month.cs" />
+    <Compile Include="Types\MetaData.cs" />
+    <Compile Include="Types\ResultOperation.cs" />
+    <Compile Include="Utilities\CryptManager.cs" />
+    <Compile Include="Utilities\DefaultValues.cs" />
+    <Compile Include="Utilities\MailManager.cs" />
+    <Compile Include="Utilities\SerializerManager.cs" />
+    <Compile Include="Utilities\TaxCode.cs" />
+    <Compile Include="Utilities\NumericConversion.cs" />
+    <Compile Include="Utilities\PasswordManager.cs" />
+    <Compile Include="Utilities\SystemInformations.cs" />
+    <Compile Include="Utilities\Functions.cs" />
+    <Compile Include="Validations\Validator.cs" />
+    <Compile Include="Validations\XSD\XSDError.cs" />
+    <Compile Include="Validations\XSD\XSDValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Drivers\DriversRisorse.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DriversRisorse.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
